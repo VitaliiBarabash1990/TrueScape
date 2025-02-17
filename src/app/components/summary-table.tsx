@@ -1,8 +1,10 @@
 import React from 'react';
+
 export interface SummaryTableProps {
   headers: React.ReactNode;
   children?: React.ReactNode;
 }
+
 export default function SummaryTable({ headers, children }: SummaryTableProps) {
   return (
     <table className="table-auto w-full border-separate border-spacing-0">

@@ -4,10 +4,13 @@ import React from 'react';
 import Image from 'next/image';
 import SidebarItem from '@/app/components/sidebar-item';
 import { usePathname, useRouter } from 'next/navigation';
+
 export interface SidebarProps {}
+
 export default function Sidebar({}: SidebarProps) {
   const router = useRouter();
   const pathname = usePathname();
+
   const handleExitClick = () => {
     router.push('/');
   };

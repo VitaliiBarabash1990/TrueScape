@@ -1,19 +1,24 @@
-"use client";
-import React from "react";
-import { useRouter } from "next/navigation";
-import Button from "@/app/components/button";
+'use client';
+
+import React from 'react';
+import { useRouter } from 'next/navigation';
+import Button from '@/app/components/button';
+
 export interface AddPromotionButtonProps {
-	companyId: string;
+  companyId: string;
 }
+
 export default function AddPromotionButton({
-	companyId,
+  companyId,
 }: AddPromotionButtonProps) {
-	const router = useRouter();
-	return (
-		<Button
-			onClick={() => router.push(`/companies/${companyId}/new-promotion`)}
-		>
-			Add promotions
-		</Button>
-	);
+  const router = useRouter();
+  return (
+    <Button
+      onClick={() =>
+        router.push(`/companies/${companyId}/new-promotion`, { scroll: false })
+      }
+    >
+      Add promotions
+    </Button>
+  );
 }

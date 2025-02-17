@@ -1,4 +1,5 @@
 import React from 'react';
+
 export interface LayoutProps {
   children: React.ReactNode;
   stats: React.ReactNode;
@@ -7,6 +8,7 @@ export interface LayoutProps {
   countries: React.ReactNode;
   promotions: React.ReactNode;
 }
+
 export default function Layout({
   children,
   stats,
